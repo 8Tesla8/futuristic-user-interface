@@ -1,0 +1,56 @@
+<div class="background">
+
+    <table class="table">
+        <!-- HEADER -->
+        <tr class="table-header">
+            <th style="width: 140px;">
+                <div>
+                    MAKE/MODEL
+                </div>
+            </th>
+
+            <th style="width: 60px;">
+                <div>
+                    GEAR
+                </div>
+            </th>
+
+            <th style="width: 80px;">
+                <div>
+                    SPEED
+                </div>
+            </th>
+        </tr>
+        <!-- HEADER END-->
+
+
+        <tr *ngFor="let data of tableData">
+            <!-- MODEL -->
+            <td>
+                <div class="dark">
+                    {{data.year}} {{data.company | uppercase}}
+                </div>
+
+                <div class="light">
+                    {{data.model | uppercase}}
+                </div>
+            </td>
+            <!-- MODEL END -->
+
+            <!-- GEAR -->
+            <td>
+                <span>.</span>
+            </td>
+            <!-- GEAR END -->
+
+            <!-- SPEED -->
+            <td>
+                <span class="light">{{data.speed}}</span>
+                <span class="dark"> mph</span>
+            </td>
+            <!-- SPEED END-->
+        </tr>
+
+
+    </table>
+</div>
